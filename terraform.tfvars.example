@@ -84,7 +84,9 @@ instance_display_name = "tf-vcn1-vm"
 
 shape = "VM.Standard.E3.Flex"
 source_type = "image"
-source_ocid  = ""
+
+# Ubuntu 18.04 image
+source_ocid  = "ocid1.image.oc1.us-sanjose-1.aaaaaaaaooi7ockvn26773ah6tydmgyobojzww36zrzglzgppjxq4g2ouv4q"
 instance_state = "STOPPED"
 
 # operating system parameters
