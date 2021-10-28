@@ -1,0 +1,102 @@
+# provider identity parameters
+
+api_fingerprint = ""
+
+api_private_key_path = ""
+
+region = "us-phoenix-1"
+
+tenancy_id = ""
+
+user_id = ""
+
+# general oci parameters
+
+compartment_id = ""
+
+label_prefix = "dev"
+
+# vcn parameters
+
+create_drg = false
+
+create_internet_gateway = true
+
+create_nat_gateway = false
+
+create_service_gateway = false
+
+enable_ipv6 = false
+
+vcn_cidrs = ["172.16.131.0/24"]
+
+vcn_dns_label = "tfvcn"
+
+vcn_name = "tfvcn"
+
+lockdown_default_seclist = false
+
+freeform_tags = {
+  environment = "dev"
+  lob = "finance"
+}
+
+# gateways parameters
+
+drg_display_name = "drg"
+internet_gateway_display_name = "igw"
+nat_gateway_display_name = "ngw"
+service_gateway_display_name = "sgw"
+
+# subnets
+
+netnum = {
+  public      = 1
+  private     = 0
+}
+
+newbits = {
+  public      = 1
+  private     = 1
+}
+
+# compute-instance
+# provider identity parameters
+
+tenancy_ocid     = "<tenancy OCID>"
+user_ocid        = "<user OCID>"
+fingerprint      = "<PEM key fingerprint>"
+#region           = "<region in which to operate, example: us-ashburn-1, eu-frankfurt-1>"
+private_key_path = "<path to the private key that matches the fingerprint above>"
+
+# general oci parameters
+
+compartment_ocid = "<compartment_ocid>"
+
+# compute instance parameters
+
+instance_ad_number = 1
+instance_count = 1
+instance_display_name = "tf-vcn1-vm"
+
+shape = "VM.Standard.E3.Flex"
+source_type = "image"
+source_ocid  = ""
+instance_state = "STOPPED"
+
+# operating system parameters
+
+ssh_public_keys = <<EOT
+<ssh_public_key_1>
+<ssh_public_key_2>
+<ssh_public_key_3>
+EOT
+
+# storage parameters
+
+boot_volume_backup_policy = "disabled" # gold, silver, bronze, disabled
+block_storage_sizes_in_gbs = [50]
+
+# networking parameters
+
+subnet_ocids = ["<a list of the subnet OCIDs which to create the VNICs in>"]
