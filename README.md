@@ -4,8 +4,8 @@ This repository creates an OCI Virtual Network (VCN) with the following resource
 - 2 subnets - one public and one private
 - An Internet gateway and a route table
 - A virtual machine instance with 1 vCPU and 1GB of memory
-- VM instance has shape of VM.Standard.E3.Flex and resides in the public subnet with Internet access
-- VM instance has Internet access with an ephemeral public IP
+- VM instance has shape of VM.Standard.E3.Flex and by default uses Ubuntu 18.04 image
+- VM instance resides in the public subnet with Internet access, and an ephemeral public IP
 - **VM instance uses a security list that has port 22, 80, and 443 open to the Internet**
 
 It leverages the official Oracle OCI modules [terraform-oci-compute-instance](https://github.com/oracle-terraform-modules/terraform-oci-compute-instance) and [terraform-oci-vcn](https://github.com/oracle-terraform-modules/terraform-oci-vcn) to provision most of the resources. It also uses a module in the folder called subnets to create the subnets and the security lists
