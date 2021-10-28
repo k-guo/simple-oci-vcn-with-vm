@@ -12,7 +12,7 @@ It leverages the official Oracle OCI modules [terraform-oci-compute-instance](ht
 
 ## How to use the scripts
 1. Rename terraform.tfvars.example in the root folder to terraform.tfvars and set the variables per your requirements.
-   - Due to 2 modules being used, some of the variables required overlap but they are named differently
+   - Due to multiple modules being used, some of the variables required overlap but they are named differently
 2. In the terraform.tfvars file, set "vcn_cidrs" to a CIDR you would want to use for the VCN. By default it's set to 172.16.131.0/24
 3. In the terraform.tfvars file, change newbits and netnum to configure the subnets' prefixes that you want to configure. Check out this [awesome blog](http://blog.itsjustcode.net/blog/2017/11/18/terraform-cidrsubnet-deconstructed/) if you don't understand what they mean. By default the /24 is devided into two /25 subnets with 172.16.131.128/25 being the public subnet
 4. In the root folder's main.tf, in module "instance_flex" - configure variable "subnet_ocids" to determine which subnet the VM's vNIC will be attached to. By default the vNIC is attached to the public subnet and gets an ephemeral public IP automatically.
