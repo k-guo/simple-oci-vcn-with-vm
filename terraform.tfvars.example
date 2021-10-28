@@ -60,7 +60,10 @@ newbits = {
   private     = 1
 }
 
-# compute-instance
+###############################
+# Compute-Instance parameters #
+###############################
+
 # provider identity parameters
 
 tenancy_ocid     = "<tenancy OCID>"
