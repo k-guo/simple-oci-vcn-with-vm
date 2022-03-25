@@ -1,6 +1,7 @@
 # Copyright (c) 2019, 2021, Oracle Corporation and/or affiliates.
 # Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl
 
+#### Tenant level variables ####
 # provider identity parameters
 variable "api_fingerprint" {
   description = "fingerprint of oci api private key"
@@ -56,7 +57,7 @@ variable "freeform_tags" {
   }
 }
 
-# vcn parameters
+#### VCN variables ####
 
 variable "create_drg" {
   description = "whether to create Dynamic Routing Gateway. If set to true, creates a Dynamic Routing Gateway."
@@ -137,6 +138,8 @@ variable "service_gateway_display_name" {
   type        = string
   default     = "sgw"
 }
+
+#### Subnets and security lists variables ####
 
 variable "netnum" {
   description = "zero-based index of the subnet when the network is masked with the newbit. use as netnum parameter for cidrsubnet function"
